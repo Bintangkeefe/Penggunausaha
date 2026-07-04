@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bintang Wirmansyahni — Profil Usaha</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Work+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy: #16233A;
+    --navy-soft: #223655;
+    --gold: #B8912C;
+    --teal: #2F6F62;
+    --sand: #F2EEE2;
+    --sand-2: #E9E2CE;
+    --ink: #232017;
+    --ink-soft: #5B564A;
+    --line: rgba(22,35,58,0.14);
+  }
+
+  *{ box-sizing: border-box; }
+
+  html{ scroll-behavior: smooth; }
+
+  body{
+    margin:0;
+    background: var(--sand);
+    color: var(--ink);
+    font-family: 'Work Sans', sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  a{ color: inherit; }
+
+  .wrap{
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 0 28px;
+  }
+
+  /* ---------- top bar ---------- */
+  .topbar{
+    padding: 26px 0 0;
+  }
+  .topbar .wrap{
+    display:flex;
+    justify-content: space-between;
+    align-items:center;
+    font-family:'JetBrains Mono', monospace;
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+  }
+  .topbar .dot{ color: var(--gold); }
+
+  /* ---------- hero ---------- */
+  .hero{
+    padding: 64px 0 70px;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero .wrap{
+    display:grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 40px;
+    align-items: center;
+  }
+  .eyebrow{
+    font-family:'JetBrains Mono', monospace;
+    font-size: 12px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--teal);
+    margin: 0 0 18px;
+    display:flex;
+    align-items:center;
+    gap:10px;
+  }
+  .eyebrow::before{
+    content:"";
+    width: 22px;
+    height:1px;
+    background: var(--teal);
+    display:inline-block;
+  }
+  h1{
+    font-family:'Fraunces', serif;
+    font-weight: 600;
+    font-size: clamp(38px, 5.4vw, 68px);
+    line-height: 1.02;
+    margin: 0 0 18px;
+    color: var(--navy);
+    letter-spacing: -0.01em;
+  }
+  .role-line{
+    font-size: 17px;
+    color: var(--ink-soft);
+    max-width: 46ch;
+    line-height: 1.6;
+    margin: 0 0 30px;
+  }
+  .role-line strong{ color: var(--navy); font-weight: 600; }
+
+  .motto{
+    font-family:'Fraunces', serif;
+    font-style: italic;
+    font-weight: 500;
+    font-size: 21px;
+    color: var(--navy);
+    border-left: 3px solid var(--gold);
+    padding: 4px 0 4px 20px;
+    margin: 0 0 32px;
+  }
+  .motto span{
+    display:block;
+    font-family:'JetBrains Mono', monospace;
+    font-style: normal;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    margin-top: 8px;
+  }
+
+  .cta{
+    display:inline-flex;
+    align-items:center;
+    gap: 10px;
+    background: var(--navy);
+    color: var(--sand);
+    text-decoration:none;
+    font-family:'Work Sans', sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    padding: 15px 26px;
+    border-radius: 3px;
+    transition: transform 0.18s ease, background 0.18s ease;
+  }
+  .cta:hover{ background: var(--teal); transform: translateY(-2px); }
+  .cta svg{ width:18px; height:18px; }
+
+  /* ---------- seal / signature element ---------- */
+  .seal-holder{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+  }
+  .seal{
+    width: 100%;
+    max-width: 300px;
+    height:auto;
+    transform: rotate(-8deg);
+    filter: drop-shadow(0 6px 18px rgba(22,35,58,0.12));
+  }
+  .seal .ring-text{
+    font-family:'JetBrains Mono', monospace;
+    font-size: 8.6px;
+    letter-spacing: 3px;
+    fill: var(--navy);
+  }
+  .seal .ring{ fill:none; stroke: var(--gold); }
+  .seal .inner-ring{ fill:none; stroke: var(--navy); stroke-width: 1.2; }
+  .seal .monogram{
+    font-family:'Fraunces', serif;
+    font-weight: 600;
+    fill: var(--navy);
+  }
+  .seal .star{ fill: var(--gold); }
+
+  /* ---------- divider ---------- */
+  .divider{
+    height:1px;
+    background: var(--line);
+    max-width: 980px;
+    margin: 0 auto;
+  }
+
+  section{ padding: 68px 0; }
+
+  h2{
+    font-family:'Fraunces', serif;
+    font-weight: 600;
+    font-size: clamp(26px, 3.4vw, 34px);
+    color: var(--navy);
+    margin: 0 0 34px;
+    letter-spacing: -0.01em;
+  }
+
+  /* ---------- profil ---------- */
+  .profil-grid{
+    display:grid;
+    grid-template-columns: 1.3fr 0.9fr;
+    gap: 54px;
+    align-items:start;
+  }
+  .profil-text p{
+    font-size: 16.5px;
+    line-height: 1.85;
+    color: var(--ink-soft);
+    margin: 0 0 20px;
+  }
+  .profil-text strong{ color: var(--navy); font-weight: 600; }
+
+  .facts{
+    background: var(--sand-2);
+    border-radius: 6px;
+    padding: 30px;
+  }
+  .fact{
+    padding: 16px 0;
+    border-bottom: 1px solid rgba(22,35,58,0.1);
+  }
+  .fact:last-child{ border-bottom:none; padding-bottom:0; }
+  .fact:first-child{ padding-top:0; }
+  .fact-label{
+    font-family:'JetBrains Mono', monospace;
+    font-size: 10.5px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--teal);
+    margin-bottom: 6px;
+  }
+  .fact-value{
+    font-size: 15.5px;
+    color: var(--navy);
+    font-weight: 500;
+  }
+
+  /* ---------- struktur / roles ---------- */
+  .roles{
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+  }
+  .role-card{
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    padding: 30px 26px;
+    position: relative;
+  }
+  .role-card::before{
+    content: attr(data-mark);
+    position:absolute;
+    top: 22px;
+    right: 24px;
+    font-family:'JetBrains Mono', monospace;
+    font-size: 10px;
+    color: var(--gold);
+    letter-spacing: 0.08em;
+  }
+  .role-label{
+    font-family:'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--teal);
+    margin-bottom: 14px;
+  }
+  .role-name{
+    font-family:'Fraunces', serif;
+    font-size: 21px;
+    font-weight: 600;
+    color: var(--navy);
+    margin-bottom: 10px;
+    line-height: 1.25;
+  }
+  .role-desc{
+    font-size: 14.5px;
+    color: var(--ink-soft);
+    line-height: 1.6;
+  }
+
+  /* ---------- footer / contact ---------- */
+  footer{
+    background: var(--navy);
+    color: var(--sand);
+    padding: 64px 0 40px;
+  }
+  footer h2{ color: var(--sand); }
+  .contact-row{
+    display:flex;
+    justify-content: space-between;
+    align-items:flex-end;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-bottom: 46px;
+  }
+  .contact-text{
+    max-width: 40ch;
+    color: rgba(242,238,226,0.72);
+    font-size: 15px;
+    line-height: 1.7;
+  }
+  .cta-light{
+    display:inline-flex;
+    align-items:center;
+    gap: 10px;
+    background: var(--gold);
+    color: var(--navy);
+    text-decoration:none;
+    font-weight: 600;
+    font-size: 15px;
+    padding: 15px 26px;
+    border-radius: 3px;
+    transition: transform 0.18s ease;
+  }
+  .cta-light:hover{ transform: translateY(-2px); }
+  .foot-bottom{
+    border-top: 1px solid rgba(242,238,226,0.15);
+    padding-top: 24px;
+    display:flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+    font-family:'JetBrains Mono', monospace;
+    font-size: 11.5px;
+    letter-spacing: 0.04em;
+    color: rgba(242,238,226,0.5);
+  }
+
+  /* ---------- social row ---------- */
+  .social-block{
+    margin-bottom: 40px;
+  }
+  .social-label{
+    font-family:'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: rgba(242,238,226,0.5);
+    margin-bottom: 18px;
+  }
+  .social-row{
+    display:flex;
+    flex-wrap: wrap;
+    gap: 14px;
+  }
+  .social-link{
+    display:flex;
+    align-items:center;
+    gap: 10px;
+    text-decoration:none;
+    color: var(--sand);
+    background: rgba(242,238,226,0.06);
+    border: 1px solid rgba(242,238,226,0.18);
+    padding: 12px 18px;
+    border-radius: 3px;
+    font-size: 14px;
+    font-weight: 500;
+    transition: background 0.18s ease, border-color 0.18s ease, transform 0.18s ease;
+  }
+  .social-link:hover{
+    background: rgba(184,145,44,0.15);
+    border-color: var(--gold);
+    transform: translateY(-2px);
+  }
+  .social-link svg{
+    width: 18px;
+    height: 18px;
+    fill: var(--gold);
+    flex-shrink:0;
+  }
+
+  /* ---------- responsive ---------- */
+  @media (max-width: 760px){
+    .hero .wrap{ grid-template-columns: 1fr; }
+    .seal-holder{ order:-1; margin-bottom: 10px; }
+    .seal{ max-width: 190px; }
+    .profil-grid{ grid-template-columns: 1fr; }
+    .roles{ grid-template-columns: 1fr; }
+    .contact-row{ align-items:flex-start; }
+  }
+
+  :focus-visible{
+    outline: 2px solid var(--gold);
+    outline-offset: 3px;
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    *{ transition:none !important; scroll-behavior:auto !important; }
+  }
+</style>
+</head>
+<body>
+
+  <div class="topbar">
+    <div class="wrap">
+      <span>Profil Usaha</span>
+      <span><span class="dot">●</span> UIN Imam Bonjol Padang</span>
+    </div>
+  </div>
+
+  <header class="hero">
+    <div class="wrap">
+      <div>
+        <p class="eyebrow">Pemilik &amp; Pengelola Usaha</p>
+        <h1>Bintang<br>Wirmansyahni</h1>
+        <p class="role-line">
+          <strong>Pemilik, pengelola, sekaligus admin dan tim packing</strong> dari usaha ini — dijalankan langsung oleh satu tangan, dengan tanggung jawab penuh dari perencanaan hingga paket sampai ke tangan pembeli.
+        </p>
+        <blockquote class="motto">
+          "Ambil risiko itu dan jangan takut gagal."
+          <span>— Moto Hidup</span>
+        </blockquote>
+        <a class="cta" href="https://wa.me/6289608166886" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.6 6.32A7.85 7.85 0 0 0 12.02 4a7.94 7.94 0 0 0-6.87 11.88L4 20l4.24-1.1a7.9 7.9 0 0 0 3.78.96h.01A7.94 7.94 0 0 0 20 12a7.86 7.86 0 0 0-2.4-5.68Zm-5.58 12.2h-.01a6.6 6.6 0 0 1-3.36-.92l-.24-.14-2.5.66.67-2.44-.16-.25a6.6 6.6 0 0 1 10.2-8.2 6.55 6.55 0 0 1 1.94 4.67 6.62 6.62 0 0 1-6.54 6.62Zm3.6-4.94c-.2-.1-1.17-.58-1.35-.64-.18-.07-.31-.1-.44.1-.13.2-.5.64-.62.77-.11.13-.23.15-.42.05-.2-.1-.83-.3-1.58-.98-.58-.52-.98-1.16-1.09-1.36-.11-.2-.01-.3.09-.4.09-.09.2-.23.3-.35.1-.11.13-.2.2-.33.07-.13.03-.25-.02-.35-.05-.1-.44-1.06-.6-1.45-.16-.38-.32-.33-.44-.33-.11 0-.24-.01-.37-.01-.13 0-.35.05-.53.25-.18.2-.7.68-.7 1.66s.72 1.93.82 2.06c.1.13 1.41 2.15 3.42 3.02.48.21.85.33 1.14.42.48.15.92.13 1.26.08.39-.06 1.17-.48 1.33-.94.16-.46.16-.86.11-.94-.05-.09-.18-.14-.38-.24Z"/></svg>
+          Hubungi via WhatsApp
+        </a>
+      </div>
+
+      <div class="seal-holder">
+        <svg class="seal" viewBox="0 0 220 220" xmlns="http://www.w3.org/2000/svg">
+          <circle class="ring" cx="110" cy="110" r="98" stroke-width="2"/>
+          <circle class="inner-ring" cx="110" cy="110" r="82"/>
+          <path id="ringPathTop" d="M 30,110 A 80,80 0 1,1 190,110" fill="none"/>
+          <path id="ringPathBottom" d="M 190,110 A 80,80 0 1,1 30,110" fill="none"/>
+          <text class="ring-text">
+            <textPath href="#ringPathTop" startOffset="6%">BINTANG WIRMANSYAHNI</textPath>
+          </text>
+          <text class="ring-text">
+            <textPath href="#ringPathBottom" startOffset="8%">MANAJEMEN BISNIS SYARIAH</textPath>
+          </text>
+          <text class="monogram" x="110" y="122" font-size="46" text-anchor="middle">BW</text>
+          <polygon class="star" points="110,60 113,68 121,68 114.5,73 117,81 110,76 103,81 105.5,73 99,68 107,68"/>
+        </svg>
+      </div>
+    </div>
+  </header>
+
+  <div class="divider"></div>
+
+  <section id="profil">
+    <div class="wrap">
+      <h2>Profil Singkat</h2>
+      <div class="profil-grid">
+        <div class="profil-text">
+          <p><strong>Bintang Wirmansyahni</strong> merupakan mahasiswa Semester 6 Program Studi Manajemen Bisnis Syariah, Fakultas Ekonomi dan Bisnis Islam, UIN Imam Bonjol Padang. Ia lahir di Sungai Nanam pada 14 Juni 2004. Saat ini, ia aktif mendalami ilmu manajemen, bisnis, dan ekonomi syariah sebagai bekal untuk mengembangkan kompetensi akademik serta mempersiapkan diri menghadapi dunia profesional dan kewirausahaan.</p>
+          <p>Dengan semangat belajar yang tinggi, Bintang Wirmansyahni berkomitmen untuk terus meningkatkan kemampuan, memperluas wawasan, serta memberikan kontribusi positif bagi masyarakat melalui penerapan nilai-nilai bisnis dan ekonomi syariah.</p>
+        </div>
+        <div class="facts">
+          <div class="fact">
+            <div class="fact-label">Tempat, Tanggal Lahir</div>
+            <div class="fact-value">Sungai Nanam, 14 Juni 2004</div>
+          </div>
+          <div class="fact">
+            <div class="fact-label">Program Studi</div>
+            <div class="fact-value">Manajemen Bisnis Syariah</div>
+          </div>
+          <div class="fact">
+            <div class="fact-label">Fakultas</div>
+            <div class="fact-value">Ekonomi dan Bisnis Islam</div>
+          </div>
+          <div class="fact">
+            <div class="fact-label">Kampus</div>
+            <div class="fact-value">UIN Imam Bonjol Padang</div>
+          </div>
+          <div class="fact">
+            <div class="fact-label">Semester</div>
+            <div class="fact-value">6 (Enam)</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <section id="struktur">
+    <div class="wrap">
+      <h2>Struktur Pengelolaan Usaha</h2>
+      <div class="roles">
+        <div class="role-card" data-mark="01">
+          <div class="role-label">Pemilik</div>
+          <div class="role-name">Bintang Wirmansyahni</div>
+          <div class="role-desc">Pemegang penuh usaha, bertanggung jawab atas arah, keputusan, dan keberlangsungan bisnis.</div>
+        </div>
+        <div class="role-card" data-mark="02">
+          <div class="role-label">Pengelola</div>
+          <div class="role-name">Bintang Wirmansyahni</div>
+          <div class="role-desc">Mengelola operasional harian usaha, mulai dari perencanaan hingga evaluasi berjalannya bisnis.</div>
+        </div>
+        <div class="role-card" data-mark="03">
+          <div class="role-label">Admin &amp; Tim Packing</div>
+          <div class="role-name">Bintang Wirmansyahni</div>
+          <div class="role-desc">Menangani administrasi pesanan serta proses pengemasan barang, menjaga waktu buka usaha tetap konsisten.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap">
+      <h2>Kontak Person</h2>
+      <div class="contact-row">
+        <p class="contact-text">Ada pertanyaan seputar produk, pemesanan, atau kerja sama? Hubungi langsung melalui WhatsApp, dibalas oleh pengelola sendiri.</p>
+        <a class="cta-light" href="https://wa.me/6289608166886" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M17.6 6.32A7.85 7.85 0 0 0 12.02 4a7.94 7.94 0 0 0-6.87 11.88L4 20l4.24-1.1a7.9 7.9 0 0 0 3.78.96h.01A7.94 7.94 0 0 0 20 12a7.86 7.86 0 0 0-2.4-5.68Zm-5.58 12.2h-.01a6.6 6.6 0 0 1-3.36-.92l-.24-.14-2.5.66.67-2.44-.16-.25a6.6 6.6 0 0 1 10.2-8.2 6.55 6.55 0 0 1 1.94 4.67 6.62 6.62 0 0 1-6.54 6.62Zm3.6-4.94c-.2-.1-1.17-.58-1.35-.64-.18-.07-.31-.1-.44.1-.13.2-.5.64-.62.77-.11.13-.23.15-.42.05-.2-.1-.83-.3-1.58-.98-.58-.52-.98-1.16-1.09-1.36-.11-.2-.01-.3.09-.4.09-.09.2-.23.3-.35.1-.11.13-.2.2-.33.07-.13.03-.25-.02-.35-.05-.1-.44-1.06-.6-1.45-.16-.38-.32-.33-.44-.33-.11 0-.24-.01-.37-.01-.13 0-.35.05-.53.25-.18.2-.7.68-.7 1.66s.72 1.93.82 2.06c.1.13 1.41 2.15 3.42 3.02.48.21.85.33 1.14.42.48.15.92.13 1.26.08.39-.06 1.17-.48 1.33-.94.16-.46.16-.86.11-.94-.05-.09-.18-.14-.38-.24Z"/></svg>
+          +62 896-0816-6886
+        </a>
+      </div>
+      <div class="social-block">
+        <div class="social-label">Temukan Juga di Media Sosial</div>
+        <div class="social-row">
+          <a class="social-link" href="https://www.facebook.com/share/19AgmApejm/" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24"><path d="M22 12.06C22 6.5 17.52 2 12 2S2 6.5 2 12.06c0 5 3.66 9.15 8.44 9.94v-7.03H7.9v-2.91h2.54V9.86c0-2.5 1.49-3.89 3.77-3.89 1.09 0 2.23.2 2.23.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56v1.87h2.78l-.44 2.91h-2.34V22c4.78-.79 8.44-4.94 8.44-9.94Z"/></svg>
+            Facebook
+          </a>
+          <a class="social-link" href="https://www.tiktok.com/@bintangwirmansyah?_r=1&_t=ZS-97kk9gSeUCe" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24"><path d="M16.6 5.82c-.9-.87-1.4-2.06-1.4-3.32h-3.14v13.34c0 1.62-1.32 2.94-2.94 2.94a2.94 2.94 0 0 1-2.94-2.94 2.94 2.94 0 0 1 2.94-2.94c.27 0 .53.04.78.1V9.83a6.1 6.1 0 0 0-.78-.05A6.08 6.08 0 0 0 3.06 15.86 6.08 6.08 0 0 0 9.12 21.94a6.08 6.08 0 0 0 6.06-6.08V9.05a8.2 8.2 0 0 0 4.76 1.53V7.44a4.85 4.85 0 0 1-3.34-1.62Z"/></svg>
+            TikTok
+          </a>
+          <a class="social-link" href="https://www.instagram.com/bintangkeefe?igsh=MW15bGlrNHVxaWp0MA==" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.24 2.23.41.56.21.96.47 1.38.89.42.42.68.82.89 1.38.17.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.24 1.8-.41 2.23-.21.56-.47.96-.89 1.38-.42.42-.82.68-1.38.89-.42.17-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.24-2.23-.41a3.7 3.7 0 0 1-1.38-.89 3.7 3.7 0 0 1-.89-1.38c-.17-.42-.36-1.06-.41-2.23-.06-1.27-.07-1.65-.07-4.85s.01-3.58.07-4.85c.05-1.17.24-1.8.41-2.23.21-.56.47-.96.89-1.38.42-.42.82-.68 1.38-.89.42-.17 1.06-.36 2.23-.41 1.27-.06 1.65-.07 4.85-.07M12 0C8.74 0 8.33.01 7.05.07c-1.28.06-2.15.26-2.91.56a5.87 5.87 0 0 0-2.13 1.38A5.87 5.87 0 0 0 .63 4.14c-.3.76-.5 1.63-.56 2.91C.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.06 1.28.26 2.15.56 2.91.31.79.72 1.47 1.38 2.13.66.66 1.34 1.07 2.13 1.38.76.3 1.63.5 2.91.56C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c1.28-.06 2.15-.26 2.91-.56a5.87 5.87 0 0 0 2.13-1.38 5.87 5.87 0 0 0 1.38-2.13c.3-.76.5-1.63.56-2.91.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95c-.06-1.28-.26-2.15-.56-2.91a5.87 5.87 0 0 0-1.38-2.13A5.87 5.87 0 0 0 19.86.63c-.76-.3-1.63-.5-2.91-.56C15.67.01 15.26 0 12 0Zm0 5.84A6.16 6.16 0 1 0 18.16 12 6.16 6.16 0 0 0 12 5.84Zm0 10.16A4 4 0 1 1 16 12a4 4 0 0 1-4 4Zm6.41-10.4a1.44 1.44 0 1 1-1.44-1.44 1.44 1.44 0 0 1 1.44 1.44Z"/></svg>
+            Instagram
+          </a>
+          <a class="social-link" href="https://wa.me/qr/KSQVKKJMMWHPH1" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24"><path d="M17.6 6.32A7.85 7.85 0 0 0 12.02 4a7.94 7.94 0 0 0-6.87 11.88L4 20l4.24-1.1a7.9 7.9 0 0 0 3.78.96h.01A7.94 7.94 0 0 0 20 12a7.86 7.86 0 0 0-2.4-5.68Zm-5.58 12.2h-.01a6.6 6.6 0 0 1-3.36-.92l-.24-.14-2.5.66.67-2.44-.16-.25a6.6 6.6 0 0 1 10.2-8.2 6.55 6.55 0 0 1 1.94 4.67 6.62 6.62 0 0 1-6.54 6.62Zm3.6-4.94c-.2-.1-1.17-.58-1.35-.64-.18-.07-.31-.1-.44.1-.13.2-.5.64-.62.77-.11.13-.23.15-.42.05-.2-.1-.83-.3-1.58-.98-.58-.52-.98-1.16-1.09-1.36-.11-.2-.01-.3.09-.4.09-.09.2-.23.3-.35.1-.11.13-.2.2-.33.07-.13.03-.25-.02-.35-.05-.1-.44-1.06-.6-1.45-.16-.38-.32-.33-.44-.33-.11 0-.24-.01-.37-.01-.13 0-.35.05-.53.25-.18.2-.7.68-.7 1.66s.72 1.93.82 2.06c.1.13 1.41 2.15 3.42 3.02.48.21.85.33 1.14.42.48.15.92.13 1.26.08.39-.06 1.17-.48 1.33-.94.16-.46.16-.86.11-.94-.05-.09-.18-.14-.38-.24Z"/></svg>
+            WhatsApp (Scan QR)
+          </a>
+        </div>
+      </div>
+
+      <div class="foot-bottom">
+        <span>© 2026 Bintang Wirmansyahni</span>
+        <span>Manajemen Bisnis Syariah · UIN Imam Bonjol Padang</span>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
